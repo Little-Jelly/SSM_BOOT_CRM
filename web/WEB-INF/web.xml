@@ -6,6 +6,7 @@
          version="4.0"
          metadata-complete="true">
 
+    <!--配置加载Spring文件的监听器-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:com/yyf/config/applicationContext.xml</param-value>
@@ -13,7 +14,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
+    <!--编码过滤器-->
     <filter>
         <filter-name>encoding</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -26,9 +27,9 @@
         <filter-name>encoding</filter-name>
         <url-pattern>*.action</url-pattern>
     </filter-mapping>
-
+    <!--配置Spring MVC前端核心控制器-->
     <servlet>
-        <servlet-name>springmvc</servlet-name>
+        <servlet-name>crm</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -36,9 +37,11 @@
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>springmvc</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>crm</servlet-name>
+        <url-pattern>*.action</url-pattern>
     </servlet-mapping>
-
-
+    <!--系统默认页面-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
