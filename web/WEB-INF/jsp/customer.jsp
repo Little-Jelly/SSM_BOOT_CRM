@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>客户管理-BootCRM</title>
+    <title>CRM</title>
     <!-- 引入css样式文件 -->
     <!-- Bootstrap Core CSS -->
     <link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet" />
@@ -32,7 +32,7 @@
     <nav class="navbar navbar-default navbar-static-top" role="navigation"
          style="margin-bottom: 0">
         <div class="navbar-header">
-            <a class="navbar-brand" href="<%=basePath%>customer/list.action">BOOT客户管理系统 v2.0</a>
+            <a class="navbar-brand" href="<%=basePath%>customer/list.action">客户管理系统 v1.0</a>
         </div>
         <!-- 导航栏右侧图标部分 -->
         <ul class="nav navbar-top-links navbar-right">
@@ -239,7 +239,7 @@
                     <div class="form-group">
                         <label for="customerFrom">客户来源</label>
                         <select	class="form-control" id="customerFrom" name="custSource">
-                            <option value="manual">--请选择--</option>
+                            <option value="">--请选择--</option>
                             <c:forEach items="${fromType}" var="item">
                                 <option value="${item.dict_id}"
                                         <c:if test="${item.dict_id == custSource}">selected</c:if>>
@@ -251,7 +251,7 @@
                     <div class="form-group">
                         <label for="custIndustry">所属行业</label>
                         <select	class="form-control" id="custIndustry"  name="custIndustry">
-                            <option value="gas&oil">--请选择--</option>
+                            <option value="">--请选择--</option>
                             <c:forEach items="${industryType}" var="item">
                                 <option value="${item.dict_id}"
                                         <c:if test="${item.dict_id == custIndustry}"> selected</c:if>>
@@ -263,7 +263,7 @@
                     <div class="form-group">
                         <label for="custLevel">客户级别</label>
                         <select	class="form-control" id="custLevel" name="custLevel">
-                            <option value="1">--请选择--</option>
+                            <option value="">--请选择--</option>
                             <c:forEach items="${levelType}" var="item">
                                 <option value="${item.dict_id}"
                                         <c:if test="${item.dict_id == custLevel}"> selected</c:if>>
@@ -272,7 +272,7 @@
                             </c:forEach>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="test()">查询</button>
+                    <button type="submit" class="btn btn-primary" >查询</button>
                 </form>
             </div>
         </div>
@@ -530,14 +530,6 @@
 <!-- 编写js代码 -->
 <script type="text/javascript">
 
-    // 测试点击客户查询
-    function test(){
-        var t1 = $("#customerName").val();
-        var t2 = $("#customerFrom").val();
-        var t3 = $("#custIndustry").val();
-        var t4 = $("#custLevel").val();
-        alert("t1 - t4" + t1 + ":" + t2 + ":" + t3 + ":" + t4);
-    }
     //清空新建客户窗口中的数据
     function clearCustomer() {
         $("#new_customerName").val("");

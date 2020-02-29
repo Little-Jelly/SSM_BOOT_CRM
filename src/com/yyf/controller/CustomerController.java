@@ -2,6 +2,7 @@ package com.yyf.controller;
 
 import com.yyf.po.BaseDict;
 import com.yyf.po.Customer;
+import com.yyf.po.User;
 import com.yyf.service.BaseDictService;
 import com.yyf.service.CustomerService;
 import com.yyf.utils.Page;
@@ -12,7 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -44,6 +49,51 @@ public class CustomerController {
         model.addAttribute("custIndustry", custIndustry);
         model.addAttribute("custLevel", custLevel);
         return "customer";
+    }
+
+    @RequestMapping("/customer/create.action")
+    @ResponseBody
+    public String customerCreate(Customer customer, HttpSession session){
+        User user = (User)session.getAttribute("USER_SESSION");
+        customer.setCust_create_id(user.getUser_id());
+        Date date = new Date();
+        Timestamp timestamp = new Timestamp(date.getTime());
+        customer.setCust_createtime(timestamp);
+        int rows = customerService.createCustomer(customer);
+        if(rows > 0){
+            return "OK";
+        }else {
+            return "FAIL";
+        }
+    }
+
+    @RequestMapping("/customer/getCustomerById.action")
+    @ResponseBody
+    public Customer getCustomerById(Integer id){
+        Customer customer = customerService.getCustomerById(id);
+        return customer;
+    }
+
+    @RequestMapping("/customer/update.action")
+    @ResponseBody
+    public String customerUpdate(Customer customer){
+        int rows = customerService.updateCustomer(customer);
+        if(rows > 0){
+            return "OK";
+        }else {
+            return "FAIL";
+        }
+    }
+
+    @RequestMapping("/customer/delete.action")
+    @ResponseBody
+    public String customerDelete(Integer id){
+        int rows = customerService.deleteCustomer(id);
+        if(rows > 0){
+            return "OK";
+        }else {
+            return "FAIL";
+        }
     }
 
 }

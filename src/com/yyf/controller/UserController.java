@@ -24,9 +24,9 @@ public class UserController {
     public String login(String usercode, String password, Model model, HttpSession session){
         User user = userService.findUser(usercode, password);
         if(user != null){
-            session.setAttribute("USER_SESSION", password);
-            return "customer";
-
+            session.setAttribute("USER_SESSION", user);
+//            return "customer";
+            return "redirect:customer/list.action";
         }
         model.addAttribute("msg", "账号或密码错误，请重新输入！");
         return  "login";
