@@ -3,20 +3,20 @@
 
 	<head>
 		<!--<meta charset="UTF-8">-->
-		<title>ç™»å½•é¡µé¢</title>
-		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<title>µÇÂ¼Ò³Ãæ</title>
+		<meta http-equiv=Content-Type content="text/html; charset=gbk">
 		<link href="/css/style.css" type=text/css rel=stylesheet>
 		<link href="/css/boot-crm.css" type=text/css rel=stylesheet>
 		<script src="/js/jquery-1.11.3.min.js">
 		</script>
 		<meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 		<script>
-			// åˆ¤æ–­æ˜¯ç™»å½•è´¦å·å’Œå¯†ç æ˜¯å¦ä¸ºç©º
+			// ÅĞ¶ÏÊÇµÇÂ¼ÕËºÅºÍÃÜÂëÊÇ·ñÎª¿Õ
 			function check() {
 				var usercode = $("#usercode").val();
 				var password = $("#password").val();
 				if(usercode == "" || password == "") {
-					$("#message").text("è´¦å·æˆ–å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
+					$("#message").text("ÕËºÅ»òÃÜÂë²»ÄÜÎª¿Õ£¡");
 					return false;
 				}
 				return true;
@@ -24,19 +24,19 @@
 
             // function login() {
             //     /**
-            //      *æäº¤æ–¹å¼äºŒï¼šä¸€ä¸ªä¸ªæ•°æ®ä¸Šä¼ çš„æ–¹å¼
+            //      *Ìá½»·½Ê½¶ş£ºÒ»¸ö¸öÊı¾İÉÏ´«µÄ·½Ê½
             //      */
-            //         //ä»¥ä¸‹ä¸¤å¥ç›¸å½“äº document.getElementById("userName").value;
+            //         //ÒÔÏÂÁ½¾äÏàµ±ÓÚ document.getElementById("userName").value;
             //     var userName = $("#usercode").val();
             //     var pwd = $("#password").val();
             //
-            //     //å†™æ³•ä¸€ï¼škeyå€¼å¿…é¡»è¦åŠ "";
+            //     //Ğ´·¨Ò»£ºkeyÖµ±ØĞëÒª¼Ó"";
             //     //var params = {"userName":userName,"pwd":pwd};
-            //     //å†™æ³•äºŒï¼š
+            //     //Ğ´·¨¶ş£º
             //     var params = "userName="+userName+"&pwd="+pwd;
             //
-            //     //å‘é€è¯·æ±‚åˆ°åå°
-            //     //å¦‚æœè¦ä¼ å‚ï¼Œç›´æ¥åœ¨ç¬¬äºŒä¸ªå‚æ•°ä¸­ä¼ å°±å¯ä»¥äº†
+            //     //·¢ËÍÇëÇóµ½ºóÌ¨
+            //     //Èç¹ûÒª´«²Î£¬Ö±½ÓÔÚµÚ¶ş¸ö²ÎÊıÖĞ´«¾Í¿ÉÒÔÁË
             //     $.post("login.action",params,function(result){
             //         log(result);
             //     },'text');
@@ -58,23 +58,23 @@
 						<td background="/images/rights.jpg" width="740" height="412">
 						</td>
 						<td class="login_msg" width="400" align="center">
-							<!-- margin:0px auto; æ§åˆ¶å½“å‰æ ‡ç­¾å±…ä¸­ -->
+							<!-- margin:0px auto; ¿ØÖÆµ±Ç°±êÇ©¾ÓÖĞ -->
 							<fieldset style="width: auto; margin: 0px auto;">
 								<legend>
-									<font style="font-size:15px" face="å®‹ä½“">
-										æ¬¢è¿ä½¿ç”¨BOOTå®¢æˆ·ç®¡ç†ç³»ç»Ÿ
+									<font style="font-size:15px" face="ËÎÌå">
+										»¶Ó­Ê¹ÓÃBOOT¿Í»§¹ÜÀíÏµÍ³
 									</font>
 								</legend>
 								<font color="red">
 									<span id="message"></span>
 								</font>
 								<form action="/login.action" method="post" onclick="return check()">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /> è´¦&nbsp;å·ï¼š
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /> ÕË&nbsp;ºÅ£º
 									<input id="usercode" type="text" name="usercode" value="10001" />
-									<br /><br /> å¯†&nbsp;ç ï¼š
+									<br /><br /> ÃÜ&nbsp;Âë£º
 									<input id="password" type="password" name="password" value="12345" />
 									<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<center><input type="submit" value="ç™»å½•" onclick="login()"/></center>
+									<center><input type="submit" value="µÇÂ¼" onclick="login()"/></center>
 								</form>
 							</fieldset>
 						</td>

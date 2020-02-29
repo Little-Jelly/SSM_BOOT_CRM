@@ -26,7 +26,7 @@
     <filter-mapping>
         <filter-name>encoding</filter-name>
         <!--<url-pattern>*.action</url-pattern>-->
-        <url-pattern>*.action</url-pattern>
+        <url-pattern>*.doing</url-pattern>
     </filter-mapping>
     <!--配置Spring MVC前端核心控制器-->
     <servlet>

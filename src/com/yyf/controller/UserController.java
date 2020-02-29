@@ -26,6 +26,7 @@ public class UserController {
         if(user != null){
             session.setAttribute("USER_SESSION", password);
             return "customer";
+
         }
         model.addAttribute("msg", "账号或密码错误，请重新输入！");
         return  "login";

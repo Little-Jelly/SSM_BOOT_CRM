@@ -51,7 +51,7 @@
                 <fieldset style="width: auto; margin: 0px auto;">
                     <legend>
                         <font style="font-size:15px" face="宋体">
-                            欢迎使用BOOT客户管理系统
+                            欢迎使j用BOOT客户管理系统
                         </font>
                     </legend>
                     <font color="red">
@@ -62,9 +62,9 @@
                     <form action="${pageContext.request.contextPath }/login.action"
                           method="post" onsubmit="return check()">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-                        账&nbsp;号：<input id="usercode" type="text" name="usercode" />
+                        账&nbsp;号：<input id="usercode" type="text" name="usercode" value="10001" />
                         <br /><br />
-                        密&nbsp;码：<input id="password" type="password" name="password" />
+                        密&nbsp;码：<input id="password" type="password" name="password" value="12345" />
                         <br /><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <center><input type="submit" value="登录" /></center>

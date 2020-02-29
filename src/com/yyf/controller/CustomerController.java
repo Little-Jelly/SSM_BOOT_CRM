@@ -29,8 +29,8 @@ public class CustomerController {
     private String LEVEL_TYPE;
 
     @RequestMapping(value = "/customer/list.action")
-    public String list(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer rows, String custName, String custSource, String custIndustry, String custLevel, Model model){
-        Page<Customer> customers = customerService.findCustomerList(page, rows, custName, custSource, custIndustry, custLevel);
+    public String list(@RequestParam(defaultValue = "1") Integer start, @RequestParam(defaultValue = "10") Integer rows, String custName, String custSource, String custIndustry, String custLevel, Model model){
+        Page<Customer> customers = customerService.findCustomerList(start, rows, custName, custSource, custIndustry, custLevel);
         model.addAttribute("page", customers);
         List<BaseDict> fromType = baseDictService.findBaseDictByTypeCode(FROM_TYPE);
         List<BaseDict> industryType = baseDictService.findBaseDictByTypeCode(INDUSTRY_TYPE);
