@@ -21,3 +21,12 @@ class java.lang.String cannot be cast to class com.yyf.po.User
  com.yyf.po.User is in unnamed module of loader org.apache.catalina.loader.ParallelWebappClassLoader @4da549ca)”
  问题已经解决：
  是登录之后，加入到Session的内容有错误，应该是User对象，而加入的是一个字符串，改正即可。
+ 
+ 增加一个文件上传下载的功能
+ 所以导航栏中的功能还有待实现：2020年3月1日
+   1. 文件上传和下载（前端对于我来说有点困难）
+   2. 邮件：需要明确角色的分配，和发送邮件的入口，以及阅读邮件的页面（又是前端）
+   3. 任务和完成度：创建任务的接口，是否需要上下级之间的任务分配
+   4. 消息：发送消息的入口，详细阅读消息的页面（前端）》》》：
+   5. 系统测试（配置）退出登录
+ 

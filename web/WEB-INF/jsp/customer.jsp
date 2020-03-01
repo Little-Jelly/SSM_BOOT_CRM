@@ -36,6 +36,23 @@
         </div>
         <!-- 导航栏右侧图标部分 -->
         <ul class="nav navbar-top-links navbar-right">
+            <!--文件的上传和下载-->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-file fa-fw"></i>
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown">
+                    <li>
+                        <a><i class="btn"></i>
+                            上传文件</a>
+                    </li>
+                    <li>
+                        <a><i class="btn"></i>
+                            下载文件</a>
+                    </li>
+                </ul>
+            </li>
             <!-- 邮件通知 start -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -173,19 +190,23 @@
                     <i class="fa fa-user fa-fw"></i>
                     <i class="fa fa-caret-down"></i>
                 </a>
-                <%--<ul class="dropdown-menu dropdown-user">--%>
-                    <%--<li><a href="#"><i class="fa fa-user fa-fw"></i>--%>
-                        <%--用户：${USER_SESSION.user_name}--%>
-                    <%--</a>--%>
-                    <%--</li>--%>
-                    <%--<li><a href="#"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>--%>
-                    <%--<li class="divider"></li>--%>
-                    <%--<li>--%>
-                        <%--<a href="${pageContext.request.contextPath }/logout.action">--%>
-                            <%--<i class="fa fa-sign-out fa-fw"></i>退出登录--%>
-                        <%--</a>--%>
-                    <%--</li>--%>
-                <%--</ul>--%>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>
+                            用户：${USER_SESSION.user_name}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gear fa-fw"></i>
+                            系统测试
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gear fa-fw"></i>
+                            退出登录
+                        </a>
+                    </li>
+                </ul>
             </li>
             <!-- 用户信息和系统设置结束 -->
         </ul>
