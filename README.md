@@ -30,3 +30,5 @@ class java.lang.String cannot be cast to class com.yyf.po.User
    4. 消息：发送消息的入口，详细阅读消息的页面（前端）》》》：
    5. 系统测试（配置）退出登录
  
+ 
+ 这些功能先暂停一下，我要花4天时间补充一下前端的知识，从2020年3月3日，开始commit ForeEnd_Base repository.
