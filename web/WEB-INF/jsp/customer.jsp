@@ -234,6 +234,11 @@
                             <i class="fa fa-dashboard fa-fw" ></i> 客户拜访
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-dashboard fa-fw" ></i> 文件管理
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
